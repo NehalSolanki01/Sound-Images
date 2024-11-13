@@ -189,3 +189,60 @@ countdown_timer(int(seconds))
 
 If you just need basic functionality, **`playsound`** is the easiest option. If you want more control over the sound or support for various audio formats, **`pygame`** or **`pydub`** would be better choices.
 
+___________________________________________________________________________________________________________________________________________________________________
+
+# 2. Dice Roller App
+
+This is a simple Dice Roller application built using Python's `tkinter` and `Pillow` (for image handling) libraries. The app allows users to roll a virtual dice, displaying a random dice face along with a sound effect.
+
+## Features
+
+- **Dice Rolling**: The user can click a "Roll Dice" button to simulate a dice roll, displaying one of six possible dice faces.
+- **Sound Effect**: A beep sound is played when the dice is rolled, adding to the interaction.
+- **Images**: Each dice face is represented by an image (dice1.png, dice2.png, etc.) that gets updated on the screen with every roll.
+- **Exit Button**: There is an exit button to close the application.
+
+## Requirements
+
+- Python 3.x
+- `tkinter` (for GUI functionality) - This comes pre-installed with Python.
+- `Pillow` (for image processing) - Install using:
+  ```bash
+  pip install pillow
+  ```
+
+## File Setup
+
+Make sure you have the following dice images (dice1.png, dice2.png, dice3.png, dice4.png, dice5.png, dice6.png) available in the same directory as the script. The images should represent the faces of the dice (1 to 6).
+
+## How to Run
+
+1. **Prepare the Images**:  
+   Ensure you have the dice images (dice1.png, dice2.png, etc.) in the same folder as the script. You can resize them if needed, but the app resizes them to fit the window.
+
+2. **Install Pillow**:  
+   If you don’t have the Pillow library installed, use the following command to install it:
+   ```bash
+   pip install pillow
+   ```
+
+3. **Run the Script**:  
+   Once everything is set up, you can run the script in your Python environment. The window will open, displaying the initial dice image (dice1.png).
+
+4. **Interact with the App**:  
+   - Click the "Roll Dice" button to roll the dice, which will display a random dice face (from 1 to 6).
+   - Click the "Exit" button to close the application.
+
+## Code Explanation
+
+- **Dice Roll Function**: The `roll_dice` function generates a random number between 1 and 6, and updates the displayed image of the dice accordingly.
+- **Sound Effect**: A sound is played using `winsound.Beep()` when the dice is rolled.
+- **Image Handling**: Dice images are loaded using `Pillow`, resized to fit the window, and displayed using `tkinter.Label`.
+
+
+## Notes
+
+- **Windows Only**: The `winsound` module used for the sound is only available on Windows.
+- **Image Formats**: Make sure the dice images are in `.png` format and are named `dice1.png`, `dice2.png`, ..., `dice6.png`. The images should be placed in the same directory as the script.
+- **Customizing Dice Faces**: You can customize the dice images to suit your needs, as long as the image filenames are in the correct order (dice1.png, dice2.png, etc.).
+
